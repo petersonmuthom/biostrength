@@ -58,6 +58,7 @@ biostrength-kenya-limited/
 
 ## Local Development Setup
 
+
 ### Prerequisites
 - XAMPP or equivalent PHP stack
 - PHP 8.x recommended
@@ -70,21 +71,18 @@ biostrength-kenya-limited/
 
 1. Clone the repository:
 
-git clone https://github.com/your-username/biostrength-kenya-limited.git
 
 
 2. Move the project to your web server root:
 
-C:\xampp\htdocs\biostrength-kenya-limited
 
 
-3. Start Apache and MySQL via XAMPP Control Panel.
+3. Start Apache and MySQL using the XAMPP Control Panel.
 
-4. Configure the database in `config.php`:
-```php
+4. Create a MySQL database (for example, `biostrength_db`) and configure the connection in `config.php`:
+
+```sql
 $conn = new mysqli("localhost", "root", "", "biostrength_db");
-
-    Create the users table:
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -94,52 +92,57 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-Access the application:
+```
+5. Create the required users table in your database:
 
-    http://localhost/biostrength-kenya-limited/
+```sql
+   CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-Security Notes
+```
+After setting up the database and confirming that the connection details are correct, ensure your local server is running.
 
-    Passwords are hashed using password_hash()
+You can then access the application in your browser at: http://localhost/biostrength-kenya-limited/
 
-    Sessions manage authentication state
 
-    SQL queries should be migrated to prepared statements before production
+## Security Notes
 
-    Input validation and CSRF protection are planned
+User passwords are securely hashed using PHP’s built-in password_hash() function before being stored in the database.
 
-Planned Improvements
+Sessions are used to manage authentication state.
 
-    Prepared statements
+SQL queries currently use direct execution and should be migrated to prepared statements before production deployment.
 
-    Logout functionality
+Input validation and CSRF protection are planned improvements.
 
-    Role-based access control
+## Planned Improvements
 
-    Admin dashboard
+Prepared statements for database queries
 
-    Training and compliance modules
+Logout functionality with proper session destruction
 
-    Audit logging
+Role-based access control
 
-    Production deployment configuration
+Admin dashboard
 
-Contribution Guidelines
+Training and compliance modules
 
-    Follow existing code style
+Audit logging
 
-    Test changes locally before committing
+Production deployment configuration
 
-    Write clear commit messages
-
-    Do not commit sensitive data
-
-Pull requests and issues are welcome.
-License
+## License
 
 This project is proprietary and developed for Biostrength Kenya Limited.
-Unauthorized redistribution or commercial use is not permitted.
-Maintainers
+Unauthorized redistribution or commercial use is not permitted without prior approval.
 
-Biostrength Kenya Limited
-Internal Development Team
+## Maintainers
+
+Biostrength Kenya Limited.
+Peterson Muthomi Softwares.
+
