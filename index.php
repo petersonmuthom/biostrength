@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIOSTRENGTH Login & Registration</title>
+    <title>BIOSTRENGTH KENYA LIMITED.</title>
     <link rel="stylesheet" href="styles.css">
 
     <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
