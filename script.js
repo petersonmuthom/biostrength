@@ -1,5 +1,5 @@
 function openNav() {
-  document.getElementById("mySidepanel").style.width = "340px";
+  document.getElementById("mySidepanel").style.width = "330px";
 }
 
 function closeNav() {

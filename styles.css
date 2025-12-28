@@ -20,8 +20,7 @@
     --big-font: clamp(18px, 4vw, 27px);
     --normal-font: clamp(14px, 3vw, 24px);
 }
-body{
-}
+
 .bg-video {
     position: fixed;
     top: 0;
@@ -40,9 +39,7 @@ header {
     background:rgba(7, 16, 24, 0.267);
     justify-content: center;  
 }
-.header a {
-    
-}
+
 .header-div{
     display: flex;
     justify-content: space-between;
@@ -71,7 +68,7 @@ header {
 .sidepanel  {
     display: flex;
     flex-direction: column;
-    width: min(85vw, 320px);
+    width: 0;
     position: fixed;
     z-index: 1;
     height: 100vh;
@@ -232,7 +229,7 @@ header {
     background: linear-gradient(90deg, #000000, #000000ad, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-     font-family: "BBH Hegarty", sans-serif;
+    font-family: "BBH Hegarty", sans-serif;
     background-clip: text; /* for Firefox */
     color: transparent;
     font-size: var(--normal-font);
@@ -244,5 +241,17 @@ header {
     .btn-3 {
         display: none;
     }
+    .sidepanel a {
+       padding: 20px 20px 20px 50px;
+       background:
+       linear-gradient(#3333331e, #30303018) bottom / calc(100% - 70px) 1px no-repeat;
+    }
+    .btn-1 {
+       margin: 20px 30px -10px 30px;
+    }
+    .btn {
+       margin: 20px 30px -10px 30px;
+    }
+
 }
 
