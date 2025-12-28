@@ -17,7 +17,7 @@
     color: #ffffff;
 }
 :root{
-    --big-font: clamp(18px, 4vw, 27px);
+    --big-font: clamp(25px, 4vw, 27px);
     --normal-font: clamp(14px, 3vw, 24px);
 }
 
@@ -244,13 +244,13 @@ header {
     .sidepanel a {
        padding: 20px 20px 20px 50px;
        background:
-       linear-gradient(#3333331e, #30303018) bottom / calc(100% - 70px) 1px no-repeat;
+       linear-gradient(#3333331e, #30303018) bottom / calc(100% - 64px) 1px no-repeat;
     }
     .btn-1 {
-       margin: 20px 30px -10px 30px;
+       margin: 20px 37px -10px 37px;
     }
     .btn {
-       margin: 20px 30px -10px 30px;
+       margin: 20px 37px -10px 37px;
     }
 
 }
