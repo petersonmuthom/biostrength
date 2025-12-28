@@ -2,282 +2,241 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-color: #000000 #ffffff;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: transparent;
+    outline: none; 
 }
-header{
+::selection {
+    background-color: #000000;
+    color: #ffffff;
+}
+::-moz-selection {   /*   For Firefox :(     */
+    background-color: #000000a8;
+    color: #ffffff;
+}
+:root{
+    --big-font: clamp(18px, 4vw, 27px);
+
+}
+body{
+}
+.bg-video {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
-    display: flex;
-    align-items: center;
-    z-index: 99;
-    backdrop-filter: blur(20px);
-}
-.logo{
-    font-size: 30px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    margin-right: auto;
-}
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 40px;
-    font-weight: 500;
-}
-.user-auth{
-    margin-left: 40px;
-}
-.user-auth .login-btn-modal{
-    height: 40px;
-    padding: 0 35px;
-    background: transparent;
-    border: 2px solid #fff;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #fff;
-    font-weight: 500;
-    cursor: pointer;
-    transition: .5s;
-}
-.user-auth .login-btn-modal:hover{
-    background: #fff;
-    color: #222;
-}
-section{
-    min-height: 100vh;
-    background: url(images/background.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 0 100px;
-
-}
-section h1{
-    position: absolute;
-    bottom: 40px;
-    font-size: 25px;
-    color: #fff;
-    font-weight: 600;
-}
-.auth-modal{
-    position: fixed;
-    width: 420px;
-    height: 440px;
-    background: rgba(0, 0, 0, .3);
-    border: 2px solid rgba(255, 255, 255, .3);
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
-    backdrop-filter: blur(20px);
-    color: #fff;
-    inset: 0;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    transition: height .2s ease, transform .5s ease;
-    overflow: hidden;
-    transform: scale(0);
-}
-
-.auth-modal.show{
-    transform: scale(1);
-}
-
-.auth-modal.slide {
-    height: 520px;
-}
-
-.auth-modal .form-box{
-    width: 100%;
-    padding: 40px;
-}
-
-.auth-modal .form-box.login, .auth-modal.slide .form-box.register {
-    transform: translateX(0);
-    transition: transform .18s ease;
-
-}
-
-.auth-modal.slide .form-box.login{
-    transform: translateX(-400px);
-    transition: none;
-
-}
-
-.auth-modal .form-box.register{
-    position: absolute;
-    transform: translateX(400px);
-}
-
-.form-box h2{
-    font-size: 35px;
-    text-align: center;
-}
-.input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
-}
-.input-box input{
-    width: 100%;
     height: 100%;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .3);
-    outline: none;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #fff;
-    padding: 20px 45px 20px 20px;
-} 
-.input-box input::placeholder{
-    color: #fff;
+    object-fit: cover;
+    z-index: -1;
 }
-.input-box i{
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-}
-.btn{
+header {
     width: 100%;
-    height: 45px;
-    background: #fff;
-    border-radius: 40px;
-    border: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    font-size: 16px;
-    color: #222;
-    font-weight: 500;
-    cursor: pointer;
+    height: 88px;
+    align-items: center;
+    align-content: center;
+    position: fixed;
+    background:rgba(7, 16, 24, 0.267);
+    justify-content: center;  
 }
-.form-box p{
-    font-size: 14.5px;
-    text-align: center;
-    margin: 25px 0px 10px;
+.header a {
+    
 }
-.form-box p a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-.form-box p a:hover{
-    color: #fff;
-    text-decoration: underline;
+.header-div{
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(20px);
+    align-items: center;
+    margin: 7px 7px;
+    width: 98%;
 
-}
-.auth-modal .close-btn-modal{
-    position: absolute;
+    height: 70px;
+    background:#030303;
+    position: fixed;
     top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background: #fff;
-    border: none;
-    border-bottom-left-radius: 20px;
-    font-size: 35px;
-    color: #222;
-    cursor: pointer;
-    z-index: 1;
+    z-index: 10;
+
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
 }
-.profile-box .avatar-circle{
-    width: 40px;
-    height: 40px;
-    background: #fff;
-    border-radius: 50%;
-    line-height: 40px;
-    text-align: center;
-    font-size: 24.9px;
-    font-weight: 600;
-    cursor: pointer;
+.logo-txt{
+    font-size: 10px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "BBH Bogle", sans-serif;
 }
-.profile-box .dropdown{
-    position: absolute;
-    top: 85px;
-    right: 100px;
-    padding: 10px;
-    background: #fff;
-    border-radius: 8px;
+.sidepanel  {
     display: flex;
     flex-direction: column;
-    transform: translateY(20px);
-    opacity: 0;
-    pointer-events: none;
-    transition: .5s;
-}
-
-.profile-box.show .dropdown{
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.profile-box .dropdown a{
-    padding: 6px 12px;
-    border-radius: 4px;
-    color: #222;
-    text-decoration: none;
-    font-weight: 500;
-    margin: 2px 0;
-    transition: .2s;
-}
-.profile-box .dropdown a:hover{
-    background: #eee;
-}
-.alert-box{
+    width: 0;
     position: fixed;
-    inset: 0;
-    top: 35px;
-    margin: 0 auto;
-    width: 350px;
-    height: 70px;
-    background: #fff;
-    border-radius: 6px;
-    padding: 0 15px;
-    z-index: 100;
-    overflow: hidden;
-    transform: translateY(calc(-100% - 35px));
-    transition: .5s ease;
+    z-index: 1;
+    height: 100vh;
+    top: 0;
+    right: 0; /* CHANGED */
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-.alert-box.show{
-    transform: translateY(0);
+.sidepanel a {
+    padding: 20px 20px 20px 30px;
+    text-decoration: none;
+    font-size: var(--big-font);
+    font-family: "BBH Bogle", sans-serif;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+    transition: 0.3s;
+   background:
+    linear-gradient(#3333331e, #30303018) bottom / calc(100% - 40px) 1px no-repeat;
 }
-
-.alert{
+.sidepanel .arrow {
+  font-size: 20px;
+  opacity: 0.7;
+}
+.sidepanel a:hover {
+    color: #00000081;
+}
+.sidepanel-actions {
+  margin-top: auto;      /* 👈 pushes buttons to bottom */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  font-size: 36px;
+  background: none;
+}
+.sidepanel a:hover .arrow {
+  transform: translateX(4px);
+  transition: transform 0.3s ease;
+}
+.nav-actions{
     display: flex;
     align-items: center;
-    height: 100%;
-    color: #222;
-    font-weight: 500;
+    gap: 20px;
 }
-.alert::after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.openbtn {
+    margin: 0px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    right: 20px;
+    position: fixed;
+}
+.btn-1 {
+    margin: 20px 10px -10px 40px;
+    border: solid 2px #000000;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: var(--big-font);
+    font-family: "BBH Bogle", sans-serif;
+    font-weight: 400;
+    transition: background 0.3s;
+    align-items: end;
+}
+.btn-1:hover {
+    background-color: #ffffff;
+    border: solid 2px #00000081;
+    color: #00000081;
+}
+.btn {
+    margin: 20px 10px -10px 40px;
+    border: none;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    padding: 17px 30px;
+    text-decoration: none;
+    font-size: var(--big-font);
+    font-family: "BBH Bogle", sans-serif;
+    font-weight: 400;
+    transition: background 0.3s;
+}
+.btn:hover {
+    border: none;
+    background-color: #00000081;
+    color: rgba(255, 255, 255, 0.69);
+}
+.btn-2 {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-size: var(--big-font);
+    font-family: "BBH Bogle", sans-serif;
+    font-weight: 400;
+    transition: background 0.3s;
+}
+.btn-2:hover {
+    background-color: #ffffff;
+    color: #00000081;
+}
+.btn-3 {
+    margin: 0 40px 0 0 ;
+    border: solid 2px #ffffff;
+    color: #ffffff;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-size: var(--big-font);
+    font-family: "BBH Bogle", sans-serif;
+    font-weight: 400;
+    transition: background 0.3s;
+}
+.btn-3:hover {
+    border: solid 2px #ffffffd2;
+    color: #ffffffd2;
+}
+#boody{
+    display: block;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
     width: 100%;
-    height: 5px;
-    background: seagreen;
-    animation: progress 6s linear forwards;
+    height: 700px;
+
 }
-.alert.error::after{
-    background: red;
+#overlay{
+    background-color: rgba(7, 16, 24, 0.089);
+       position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+#boody h1{
+    background: #ffffffe8;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* for Firefox */
+    font-family: "BBH Bogle", sans-serif;
+    color: transparent;
+    font-size: clamp(2rem, 6vw, 6rem);
+    font-weight: 800;
+}
+#boody p{
+    background: linear-gradient(90deg, #000000, #000000ad, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     font-family: "BBH Hegarty", sans-serif;
+    background-clip: text; /* for Firefox */
+    color: transparent;
+    font-size: clamp(10px, 20px, 20px);
+    font-weight: 800;
+    width: 700px;
+    margin: 0px auto 0px auto;
 }
 
-@keyframes progress{
-    100%{
-        width: 0;
-    }
-}
-
-.alert i{
-    font-size: 35px;
-    color: seagreen;
-    margin-right: 8px;
-}
-.alert.error i{
-    color: red;
-}
