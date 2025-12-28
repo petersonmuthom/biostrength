@@ -81,6 +81,7 @@ header {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.6);
 }
 
 .sidepanel a {
@@ -138,7 +139,7 @@ header {
     position: fixed;
 }
 .btn-1 {
-    margin: 20px 10px -10px 40px;
+    margin: 20px 20px -10px 20px;
     border: solid 2px #000000;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
@@ -156,7 +157,7 @@ header {
     color: #00000081;
 }
 .btn {
-    margin: 20px 10px -10px 40px;
+    margin: 20px 20px -10px 20px;
     border: none;
     background: #000000;
     color: rgb(255, 255, 255);
