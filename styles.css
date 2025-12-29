@@ -19,6 +19,7 @@
 :root{
     --big-font: clamp(25px, 4vw, 27px);
     --normal-font: clamp(14px, 3vw, 24px);
+    --font-family: "BBH Bogle", sans-serif;
 }
 .bg-video {
     position: fixed;
@@ -214,13 +215,13 @@ header {
     align-content: center;
     justify-content: center;
     width: 100%;
-    padding: 40px 60px 0 60px;
+    padding: 40px 60px 100px 60px;
 }
 .sub-boody{
     position: relative;
     z-index: 99;
     background-color: #0000009d;
-    padding: 20px 70px;
+    padding: 20px 70px 70px 70px;
     border: 1px solid #ffffff50;
     
     backdrop-filter: blur(10px);
@@ -232,10 +233,9 @@ header {
     color: #ffffff;
     font-family: "BBH Bogle", sans-serif;
     font-size: clamp(2rem, 6vw, 6rem);
-    font-weight: 800;
+    font-weight: 400;
 }
 #boody p{
-    font-family: "BBH Hegarty", sans-serif;
     color: #ffffffd8;
     font-size: var(--normal-font);
     font-weight: 800;
@@ -256,6 +256,60 @@ header {
     background-color: #ffffff;
     color: #00000081;
 }
+.categories {
+  padding: 60px 5%;
+  background: #e0e2e4;
+  text-align: center;
+}
+
+.categories h1 {
+    font-family: var(--font-family);
+    font-size: var(--big-font);
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+/* Grid layout */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* Card styling */
+.category-card {
+    border: 1px solid #03030359;
+  background: #ffffff;
+  padding: 30px 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.281);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.486);
+}
+
+/* Icon */
+.category-card .icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* Text */
+.category-card h3 {
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.category-card p {
+  font-size: 14px;
+  color: #555;
+}
+
 @media (max-width: 500px) {
 
     .header-div{
@@ -280,62 +334,11 @@ header {
         right: 17px;
     }
     #boody{
-        padding: 40px 20px 0 20px;
+        padding: 40px 20px 60px 20px;
     }
     .sub-boody{
-        padding: 20px 20px;
+        padding: 20px 20px 60px 20px;
     }
 
 
 }
-.categories {
-  padding: 60px 5%;
-  background: #f4f6f8;
-  text-align: center;
-}
-
-.categories h2 {
-  font-size: 28px;
-  margin-bottom: 40px;
-  font-weight: 600;
-}
-
-/* Grid layout */
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-}
-
-/* Card styling */
-.category-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 30px 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.category-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.12);
-}
-
-/* Icon */
-.category-card .icon {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
-
-/* Text */
-.category-card h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.category-card p {
-  font-size: 14px;
-  color: #555;
-}
-
