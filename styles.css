@@ -20,6 +20,7 @@
     --big-font: clamp(25px, 4vw, 27px);
     --normal-font: clamp(14px, 3vw, 24px);
     --font-family: "BBH Bogle", sans-serif;
+    --font-2: font-family: "Ubuntu", sans-serif;
 }
 .bg-video {
     position: fixed;
@@ -50,7 +51,7 @@ header {
     width: 100%;
 
     height: 80px;
-    background:#030303;
+    background:#0000FF;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -87,7 +88,7 @@ header {
     text-decoration: none;
     font-size: var(--big-font);
     font-family: "BBH Bogle", sans-serif;
-    color: #000000;
+    color: #0000FF;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -137,7 +138,7 @@ header {
     margin: 0px;
     font-size: 30px;
     cursor: pointer;
-    background-color: #000000;
+    background-color: #0000FF;
     color: white;
     padding: 8px 4px;
     border: none;
@@ -146,9 +147,9 @@ header {
 }
 .btn-1 {
     margin: 20px 20px -10px 20px;
-    border: solid 2px #000000;
+    border: solid 2px #0000FF;
     background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    color: #0000FF;
     padding: 14px 30px;
     text-decoration: none;
     font-size: var(--big-font);
@@ -165,7 +166,7 @@ header {
 .btn {
     margin: 20px 20px -10px 20px;
     border: none;
-    background: #000000;
+    background: #0000FF;
     color: rgb(255, 255, 255);
     padding: 17px 30px;
     text-decoration: none;
@@ -181,7 +182,7 @@ header {
 }
 .btn-2 {
     background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    color: #0000FF;
     padding: 12px 28px;
     text-decoration: none;
     font-size: var(--big-font);
@@ -223,7 +224,7 @@ header {
     background-color: #0000009d;
     padding: 20px 70px 70px 70px;
     border: 1px solid #ffffff50;
-    
+    border-radius: 20px;
     backdrop-filter: blur(10px);
     margin-top: 140px;
 }
@@ -231,11 +232,12 @@ header {
     padding: 10px 0px;
     width: 100%;
     color: #ffffff;
-    font-family: "BBH Bogle", sans-serif;
+    font-family: var(--font-family);
     font-size: clamp(2rem, 6vw, 6rem);
     font-weight: 400;
 }
 #boody p{
+    font-family: "Ubuntu", sans-serif;
     color: #ffffffd8;
     font-size: var(--normal-font);
     font-weight: 800;
@@ -258,7 +260,7 @@ header {
 }
 .categories {
   padding: 60px 5%;
-  background: #e0e2e4;
+  background: #ffff;
   text-align: center;
 }
 
@@ -274,16 +276,18 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
+  padding-bottom: 40px;
 }
 
 /* Card styling */
 .category-card {
     border: 1px solid #03030359;
-  background: #ffffff;
-  padding: 30px 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.281);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px 20px 40px 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.281);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .category-card:hover {
@@ -306,6 +310,7 @@ header {
 }
 
 .category-card p {
+    font-family: "Ubuntu", sans-serif;
   font-size: 14px;
   color: #555;
 }
